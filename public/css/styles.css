@@ -1,0 +1,393 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+.first {
+  position: relative;
+  height: calc(100% - 66px);
+}
+@media (min-width: 1200px) {
+  .first {
+    height: 100%;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F2F5FA 100%);
+  }
+}
+
+.header {
+  z-index: 999;
+  padding: 0 20px;
+  background-color: white;
+  height: 66px;
+  display: flex;
+  align-items: center;
+  top: 0;
+}
+@media (min-width: 1200px) {
+  .header {
+    width: 680px;
+    height: 40px;
+    margin-top: 100px;
+    padding: 0 100px;
+    align-items: flex-end;
+    position: absolute;
+    z-index: 999;
+  }
+}
+.header img:nth-of-type(2) {
+  display: none;
+  padding-left: 15px;
+  padding-bottom: 3px;
+  font-size: 16px;
+}
+@media (min-width: 1200px) {
+  .header img:nth-of-type(2) {
+    display: block;
+  }
+}
+@media (min-width: 1200px) {
+  .header .grid-item {
+    margin: 0;
+  }
+}
+.header a.grid-item:nth-of-type(2) {
+  padding: 0 20px;
+}
+@media (min-width: 1200px) {
+  .header a.grid-item:nth-of-type(2) {
+    padding: 0 30px;
+  }
+}
+.header a {
+  font-family: Arial;
+  font-size: 14px;
+  font-size: 14px;
+  color: #6A707B;
+  text-decoration: none;
+}
+@media (min-width: 1200px) {
+  .header a {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+.header a:nth-of-type(1) {
+  margin-left: auto;
+}
+
+.main-content {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+@media (min-width: 1200px) {
+  .main-content {
+    top: auto;
+    margin-top: 374px;
+    position: relative;
+    transform: translate(0, 0);
+  }
+}
+.main-content .box {
+  padding: 30px 20px;
+  background: linear-gradient(180deg, #FFFFFF 0%, #F2F5FA 100%);
+  margin: 0 20px;
+}
+@media (min-width: 1200px) {
+  .main-content .box {
+    background: transparent;
+    margin: 0 140px;
+    padding: 0;
+  }
+}
+.main-content .box h1 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  line-height: 34px;
+  font-family: Georgia;
+  color: #131821;
+  font-size: 24px;
+  font-weight: normal;
+}
+@media (min-width: 1200px) {
+  .main-content .box h1 {
+    font-size: 32px;
+    line-height: 44px;
+    margin-bottom: 15px;
+  }
+}
+.main-content .box h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-family: Arial;
+  color: #6A707B;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 26px;
+}
+@media (min-width: 1200px) {
+  .main-content .box h3 {
+    font-size: 16px;
+    line-height: 28px;
+    margin-bottom: 50px;
+  }
+}
+.main-content .box form .mail-field {
+  display: flex;
+  background-color: white;
+}
+@media (min-width: 1200px) {
+  .main-content .box form .mail-field {
+    width: 663px;
+    position: relative;
+    left: -40px;
+  }
+}
+.main-content .box form .mail-field p {
+  line-height: 60px;
+  position: absolute;
+  padding-left: 19px;
+  margin: 0;
+  color: #131821;
+  font-family: Arial;
+  font-weight: normal;
+  font-size: 16px;
+  display: none;
+}
+@media (min-width: 1200px) {
+  .main-content .box form .mail-field p {
+    line-height: 70px;
+    padding-left: 44px;
+  }
+}
+.main-content .box form .mail-field:hover {
+  box-shadow: 0px 15px 15px #E3E3E4;
+}
+.main-content .box form .mail-field:hover .button-blue {
+  display: block;
+}
+.main-content .box form .mail-field:hover .button {
+  display: none;
+}
+.main-content .box form .mail-field:hover .mail::placeholder {
+  color: transparent;
+}
+@media (min-width: 1200px) {
+  .main-content .box form .mail-field:hover p {
+    display: block;
+  }
+}
+.main-content .box form .mail-field:focus-within {
+  box-shadow: 0px 15px 15px #E3E3E4;
+}
+.main-content .box form .mail-field:focus-within p {
+  display: none;
+}
+.main-content .box form .mail-field:focus-within .button-blue {
+  display: none;
+}
+.main-content .box form .mail-field:focus-within .button {
+  display: block;
+}
+.main-content .box form .mail-field .mail {
+  width: 100%;
+  border: 1px solid #E3E3E4;
+  border-right: none;
+  border-left: 4px solid #4066A5;
+  padding-left: 15px;
+  height: 60px;
+  font-family: Arial;
+  font-weight: normal;
+  font-size: 16px;
+  color: #6A707B;
+}
+@media (min-width: 1200px) {
+  .main-content .box form .mail-field .mail {
+    height: 70px;
+    padding-left: 40px;
+  }
+}
+.main-content .box form .mail-field .mail:focus {
+  outline: none;
+}
+.main-content .box form .mail-field .mail:focus::placeholder {
+  color: #6A707B;
+}
+.main-content .box form .mail-field .button {
+  border: 1px solid #E3E3E4;
+  border-left: none;
+  padding-right: 15px;
+}
+.main-content .box form .mail-field .button:focus {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.main-content .box form .mail-field .button-blue {
+  display: none;
+  border: 1px solid #E3E3E4;
+  border-left: none;
+  padding-right: 15px;
+}
+.main-content .box form .mail-field .button-blue:focus {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.main-content .box form .check-box {
+  height: 26px;
+  margin: 21px 0;
+  display: block;
+  position: relative;
+  user-select: none;
+}
+@media (min-width: 1200px) {
+  .main-content .box form .check-box {
+    margin: 54px 0 51px;
+  }
+}
+.main-content .box form #check {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+.main-content .box form .checkmark {
+  position: absolute;
+  height: 26px;
+  width: 26px;
+  border: 1px solid #E3E3E4;
+  border-radius: 3px;
+}
+.main-content .box form .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 5px;
+  top: 7px;
+  width: 14px;
+  height: 8px;
+  border: solid white;
+  border-radius: 2px;
+  border-width: 0px 0px 3px 3px;
+  transform: rotate(-45deg);
+}
+.main-content .box form input[type=checkbox]:checked + span {
+  background-color: #4066A5;
+  border-color: #4066A5;
+}
+.main-content .box form .check-box input:checked ~ .checkmark:after {
+  display: block;
+}
+.main-content .box form .check-label {
+  padding-left: 41px;
+  font-family: Arial;
+  font-weight: normal;
+  color: #6A707B;
+  line-height: 26px;
+}
+.main-content .box form .check-label a {
+  color: black;
+}
+.main-content .box form .check-label a:hover {
+  color: #4066A5;
+}
+.main-content .box form .check-label a:active {
+  color: #233759;
+}
+.main-content .box .icons {
+  text-align: center;
+  border-top: 1px solid #E3E3E4;
+  margin: 0 35px 0 20px;
+  font-size: 0;
+}
+@media (min-width: 1200px) {
+  .main-content .box .icons {
+    margin: 0;
+  }
+}
+.main-content .box .icons i {
+  margin: 20px 5px 0;
+  color: rgba(19, 24, 33, 0.4);
+  border: 2px solid #E3E3E4;
+  width: 46px;
+  height: 46px;
+  font-size: 16px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+@media (min-width: 1200px) {
+  .main-content .box .icons i {
+    margin: 50px 10px 0;
+    color: rgba(19, 24, 33, 0.3);
+  }
+}
+.main-content .box .icons a:nth-of-type(4) i:active, .main-content .box .icons a:nth-of-type(4) i:hover, .main-content .box .icons a:nth-of-type(3) i:active, .main-content .box .icons a:nth-of-type(3) i:hover, .main-content .box .icons a:nth-of-type(2) i:active, .main-content .box .icons a:nth-of-type(2) i:hover, .main-content .box .icons a:nth-of-type(1) i:active, .main-content .box .icons a:nth-of-type(1) i:hover {
+  border-style: none;
+  color: white;
+}
+.main-content .box .icons a {
+  text-decoration: none;
+}
+.main-content .box .icons a:nth-of-type(1) i:hover {
+  background-color: #4267B2;
+}
+.main-content .box .icons a:nth-of-type(1) i:active {
+  background-color: #2F4A80;
+}
+.main-content .box .icons a:nth-of-type(2) i:hover {
+  background-color: #C13584;
+}
+.main-content .box .icons a:nth-of-type(2) i:active {
+  background-color: #8F2762;
+}
+.main-content .box .icons a:nth-of-type(3) i:hover {
+  background-color: #1DA1F2;
+}
+.main-content .box .icons a:nth-of-type(3) i:active {
+  background-color: #177FBF;
+}
+.main-content .box .icons a:nth-of-type(4) i:hover {
+  background-color: #FF0000;
+}
+.main-content .box .icons a:nth-of-type(4) i:active {
+  background-color: #CC0000;
+}
+
+.row {
+  position: relative;
+  height: 100vh;
+}
+@media (min-width: 1200px) {
+  .row {
+    display: grid;
+    grid-template-columns: 680px auto;
+  }
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  background-image: url("../media/image_summer.png");
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+@media (min-width: 1200px) {
+  .background {
+    position: static;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
