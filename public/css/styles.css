@@ -144,6 +144,12 @@ body {
   display: flex;
   background-color: white;
 }
+.main-content .box form .mail-field input:first-of-type:focus ~ input:nth-of-type(2) {
+  display: none;
+}
+.main-content .box form .mail-field input:first-of-type:focus ~ input:nth-of-type(3) {
+  display: block;
+}
 @media (min-width: 1200px) {
   .main-content .box form .mail-field {
     width: 663px;
@@ -190,12 +196,6 @@ body {
 }
 .main-content .box form .mail-field:focus-within p {
   display: none;
-}
-.main-content .box form .mail-field:focus-within .button-blue {
-  display: none;
-}
-.main-content .box form .mail-field:focus-within .button {
-  display: block;
 }
 .main-content .box form .mail-field .mail {
   width: 100%;
@@ -388,6 +388,25 @@ body {
   .background {
     position: static;
   }
+}
+
+.err-message {
+  position: absolute;
+  text-align: left;
+  font-size: 10px;
+  font-style: italic;
+  color: red;
+  display: none;
+}
+@media (min-width: 1200px) {
+  .err-message {
+    margin-left: -40px;
+    font-size: 14px;
+  }
+}
+
+.show {
+  display: block;
 }
 
 /*# sourceMappingURL=styles.css.map */

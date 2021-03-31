@@ -80,6 +80,7 @@ body {
     }
 }
 
+
 .main-content {
     position: absolute;
     width: 100%;
@@ -137,6 +138,16 @@ body {
         }
         form {
             .mail-field {
+
+                input:first-of-type:focus ~ input:nth-of-type(2) {
+                    // background-color: red;
+                    display: none;
+                }
+
+                input:first-of-type:focus ~ input:nth-of-type(3) {
+                    display: block;
+                }
+               
                 display: flex;
                 background-color: $white;
 
@@ -191,14 +202,6 @@ body {
                     p {
                         display: none;
                     }
-
-                    .button-blue {
-                        display: none;
-                    }
-
-                    .button {
-                        display: block;
-                    }
                 }
 
                 .mail {
@@ -248,6 +251,8 @@ body {
                         -webkit-tap-highlight-color: transparent;
                     }
                 }
+
+
             }
             
             .check-box {
@@ -441,4 +446,22 @@ z-index: -1;
     @include desktop {
         position: static;
     }
+}
+
+.err-message {
+    position: absolute;
+    text-align: left;
+    font-size: 10px;
+    font-style: italic;
+    color: red;
+    display: none;
+
+    @include desktop {
+        margin-left: -40px;
+        font-size: 14px;
+    }
+}
+
+.show {
+    display: block;
 }
